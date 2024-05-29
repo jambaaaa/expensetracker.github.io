@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root{
+    --green: #43aa8b;
+    --red: #bc4749;
+    --bg-color: #010200;
+    --second-bg-color: #1d201d;
+    --text-color: #ffffff;
+    --main-color: #57C478;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+ }
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+    padding: 2rem 9%;
+    z-index: 100;
+}
+
+.header .sticky {
+    border-bottom: .1rem solid rgba(0,0,0,.2);
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+ }
+
+ .navbar a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 3rem;
+    transition: .3s;
+ }
+
+ .navbar a:hover, 
+ .navbar a.active {
+    color: var(--main-color);
+
+ }
+
+/* -------------------------------------------EXPENSE TRACKER SECTION------------------------------------- */
+
+.home {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-bg-color);
+
+}
+
+.home-img img {
+    width: 35vw;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(50px);
+        transform: translateY(-50px);
+    }
+    0% {
+        transform: translateY(-2, 4rem);
+    }
+    100% {
+        transform: translateY(-4, 8rem);
+    }
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+
+} 
+
+
+
+ .home-content h3:nth-last-of-type(2){
+    margin-bottom: 2rem;
+
+}
+
+ span {
+    color: var(--main-color);
+
+}
+
+ .home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    list-style: 1.3;
+}
+
+ .home-content p{
+    font-size: 1.6rem;
+
+}
+
+/* -------------------------------------------EXPENSE TRACKER SECTION------------------------------------- */
+
+.container{
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.container p {
+    font-size: 2rem;
+}
+
+.budget__numbers{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    max-width: 700px;
+    margin: 1rem 0 3rem;
+}
+
+.number{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    padding: 10px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.amount__container{
+    display: flex;
+    font-size: 2rem;
+}
+
+
+
+#amount__earned,#earned__symbol{color: gold;}
+#amount__spent,#spent__symbol{color: var(--red);}
+
+
+.input__area input{
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+}
+
+.input__area #description{
+    width: 250px;
+}
+
+.input__area #amount{
+    width: 100px;
+    text-align: center;
+}
+
+/* remove arrows from number input */
+.input__area input::-webkit-outer-spin-button,
+.input__area input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.buttons__area{
+    margin: 10px 0 3rem;
+}
+
+.buttons__area #add__income,
+.buttons__area #add__expense{
+    border: none;
+    padding: 10px 20px;
+    color: var(--text-color);
+    border-radius: 15px;
+    outline: none;
+    cursor: pointer;
+}
+
+#add__income{background-color: var(--green);}
+#add__expense{background-color: var(--red);}
+
+.items__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 70%;
+    max-width: 700px;
+}
+
+#income__container h2{color: var(--green);}
+#expenses__container h2{color: var(--red);}
+
+.items__container .container{
+    font-size: 2rem;
+    width: 49%;
+    border-radius: 15px;
+}
+
+.container .item{
+    width: 100%;
+    background-color: var(--main-color);
+    border-radius: 15px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 40px 5px 30px;
+    position: relative;
+}
+
+.item__income,
+.item__expense{
+    display: flex;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.income span, .income p{color: var(--second-bg-color);}
+.expense span, .expense p{color: var(--second-bg-color);}
+
+.item .far{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--second-bg-color);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    transform: translateX(30px);
+    opacity: 0;
+}
+
+.item:hover .far{
+    animation: showDelete;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes showDelete{
+    0%{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+/* ---------------------------------------------------BUDGET MONITOR SECTION-------------------------------------------------------------*/
+
+.sign-head {
+    font-size: 3rem;
+}
+.main{
+	padding-top: 10px !important;
+    flex-grow: 1;
+    display: flex;
+  	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.topbar{
+    background-color: black;
+    color: white;
+    padding: 20px !important;
+    min-width: 325px;
+    border-radius: 25px;
+}
+
+.text-weekly{
+    margin-right: 1000px;
+    color: #eee;
+    font-size: 20px;
+    text-align: center;
+
+ }
+
+ .weekly{
+ 	margin-right: 1000px;
+ 	margin-bottom: 20px;
+ 	text-align: center;
+ 	color: white;
+    background-color: black;
+    padding: 20px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+
+ }
+
+ .weekly li{
+ 	margin-left: 20px;
+    border-radius: 100px;
+ }
+
+ .weekly input{
+    border-radius: 500px;
+ 	margin-left: 20px;
+ 	margin-bottom: 5px;
+ 	width: 40%
+    
+ }
+
+ .btn{
+    border-radius: 500px;
+    display: block;
+    width: 100%;
+    background-color: #1A8D72;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+    background-color: rgb(6, 63, 63);
+
+    
+}
+
+
+/*-----------MONTHLY---------*/
+
+.text-monthly{
+    margin-top: -500px;
+    color: #eee;
+    font-size: 20px;
+    text-align: center;
+
+ }
+
+ .monthly{
+ 	margin-top: -450px;
+ 	margin-bottom: 20px;
+ 	text-align: center;
+ 	color: white;
+    background-color: black;
+    padding: 20px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+
+ }
+
+ .monthly li{
+ 	margin-left: 20px;
+    border-radius: 100px;
+ }
+
+ .monthly input{
+    border-radius: 500px;
+ 	margin-left: 20px;
+ 	margin-bottom: 5px;
+ 	width: 40%
+    
+ }
+
+ .btn{
+    border-radius: 500px;
+    display: block;
+    width: 100%;
+    background-color: #1A8D72;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+    background-color: rgb(6, 63, 63);
+
+}
+
+/*-----------ANUALLY---------*/
+
+.text-anually{
+    margin-right: -1000px;
+    margin-top: -410px;
+    color: #eee;
+    font-size: 20px;
+    text-align: center;
+
+ }
+
+ .anually{
+ 	margin-left: 1000px;
+ 	margin-top: 30px;
+ 	text-align: center;
+ 	color: white;
+    background-color: black;
+    padding: 20px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+
+ }
+
+ .anually li{
+ 	margin-left: 20px;
+    border-radius: 100px;
+ }
+
+ .anually input{
+    border-radius: 500px;
+ 	margin-left: 20px;
+ 	margin-bottom: 5px;
+ 	width: 40%
+    
+ }
+
+ .btn{
+    border-radius: 500px;
+    display: block;
+    width: 100%;
+    background-color: #1A8D72;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+    background-color: rgb(6, 63, 63);
+
+}
+
+/* ---------------------------------------------------ABOUT US SECTION-------------------------------------------------------------*/
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--second-bg-color);
+}
+
+
+ .heading {
+    text-align: center;
+    font-size: 6rem;
+
+}
+
+ .queen {
+    overflow: hidden;
+}
+
+ img {
+    height: auto;
+    width: 25%;
+    float: left;
+    margin-right: 10px;
+
+ }
+
+  h3 {
+    font-size: 3rem;
+ }
+
+  p {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+ .dex {
+    overflow: hidden;
+    
+ }
+
+ img {
+    height: auto;
+    width: 25%;
+    float: left;
+    margin-right: 10px;
+
+ }
+
+  h3 {
+    font-size: 3rem;
+ }
+
+  p {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+
+.alex {
+    overflow: hidden;
+}
+
+ img {
+    height: auto;
+    width: 30%;
+    float: left;
+    margin-right: 15px;
+
+}
+
+ h3 {
+    font-size: 3rem;
+ }
+
+ p {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+
+
+
+.jb {
+    overflow: hidden;
+    
+ }
+
+ img {
+    height: auto;
+    width: 25%;
+    float: left;
+    margin-right: 10px;
+
+ }
+
+  h3 {
+    margin-top: 20px;
+    font-size: 3rem;
+ }
+
+  p {
+    font-size: 2rem;
+    margin-top: 0;
+
+  }
+
+/* ---------------------------------------------------FOOTER SECTION-------------------------------------------------------------*/
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background:var(--bg-color);
+ }
+
+ .footer-text p {
+    font-size: 1.6rem;
+ }
+
+ .footer-icontop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+ }
+
+ .footer-icontop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+ }
+
+ .footer-icontop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+ }
+
+ @media(max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+ }
+
+ @media(max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3%;
+
+    }
+
+    .budget {
+        padding-bottom: 7rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+
+    }
+
+    .home-design {
+      padding: 10rem 3%;
+    }
+ }
+
+ @media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem solid rgba(0,0,0,.2);
+        display: none;
+
+    }
+
+    .navbar.active {
+        display: block;
+
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+
+    }
+
+    .home {
+        flex-direction: column;
+
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+
+    }
+
+   
+
+    .about-content {
+        flex-direction: column-reverse;
+
+    }
+
+    .queen, .dex, .alex, .jb {
+        width: 70vm;
+        margin-top: 4rem;
+
+    }
+
+    .text-weekly {
+        margin-bottom: 3rem;
+
+    }
+
+    .weekly {
+        grid-template-columns: repeat(1,1fr);
+    }
+ }
+
+ @media (max-width: 768px) {
+    .budget {
+        grid-template-columns: 1fr;
+    }
+ }
+
+ @media (max-width: 450px) {
+    html {
+        font-size: 50%;
+
+    }
+    .contact form .input-box input {
+        width: 100%;
+
+    }
+ }

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--------------------------------HEADER----------------------------------->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SD.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>EXPENSE TRACKER</title>
+</head>
+
+
+
+<body>
+    <header class="header">
+        <a href="#home" class="logo">EXPENSE TRACKER</a>
+ 
+        <nav class="navbar">
+             <a href="#home" class="active"> Home</a>
+             <a href="#expense">Expenses Tracker</a>
+             <a href="#budget">Budget Monitor</a>
+             <a href="#about">About Us</a>
+        </nav>
+    </header>
+<!--------------------------HOME PAGE------------------------->
+    <section class="home" id="home">
+            
+        <div class="home-img">
+            <img src="Untitled58_20230427004650.png" alt="hahaha.png">
+
+        </div>
+
+        <div class="home-content">
+            <h3>Welcome to,</h3>
+            <h1 style="color: #57C478;">EXPENSE TRACKER</h1>
+            <h3>an <span style="color: #57C478;"> Expense Tracking System</span></h3>
+            <p>Introducing our expense tracking and budget monitoring system, a powerful tool to help you take control of your finances. Our system allows you to track your expenses, categorize your spending, and set a budget based on your income and financial goals. You can monitor your progress and make informed decisions about your spending. Whether you're looking to save money, reduce debt, or simply stay on top of your finances, our expense tracking and budget monitoring system has everything you need to succeed. Try it out today and start achieving your financial goals!
+               </p>
+
+        </div>
+    </section>
+
+<!--------------------------EXPENSE TRACKER------------------------->
+
+ <section class="expense" id="expense">
+
+    <div class="top-sign">
+        <h3>EXPENSES <span style="color: #57C478;">TRACKER</span></h3>
+    </div>
+  
+
+    <div class="container">
+        <div class="budget__numbers">
+            <div id="earned" class="number">
+                <h1 style="color: black;">Money Earned</h1>
+                <div class="amount__container">
+                    <p id="earned__symbol">₱</p>
+                    <span id="amount__earned"></span>
+                </div>
+            </div>
+            <div id="available" class="number">
+                <h1 style="color: black;">Money Available</h1>
+                <div class="amount__container">
+                    <p style="color: #1d201d">₱</p>
+                    <span id="amount__available"></span>
+                </div>
+            </div>
+            <div id="spent" class="number">
+                <h1  style="color: black;">Money Spent</h1>
+                <div class="amount__container">
+                    <p id="spent__symbol">₱</h1>
+                    <span id="amount__spent"></span>
+                </div>
+            </div>
+        </div>
+        <div class="input__area">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="amount" placeholder="Amount">
+        </div>
+        <div class="buttons__area">
+            <button id="add__income">Add Income</button>
+            <button id="add__expense">Add Expense</button>
+        </div>
+        <div class="items__container">
+            <div id="income__container" class="container">
+                <h2>Income</h2>
+                <!-- <div class="item income">
+                    <h4>Stuff sold</h4>
+                    <div class="item__income">
+                        <p class="symbol">$</p>
+                        <span class="income__amount">200</span>
+                    </div>
+                    <i class="far fa-trash-alt"></i>
+                </div> -->
+            </div>
+            <div id="expenses__container" class="container">
+                <h2>Expenses</h2>
+                <!-- <div class="item expense">
+                    <h4>Stuff bought</h4>
+                    <div class="item__expense">
+                        <p class="symbol">$</p>
+                        <span class="expense__amount">200</span>
+                    </div>
+                    <i class="far fa-trash-alt"></i>
+                </div> -->
+            </div>
+        </div>
+    </div>
+ </section>
+
+ <!--------------------------BUDGET MONITOR------------------------->
+
+ <section class="budget" id="budget">
+    <div class="body">
+
+        <div class="sign-head">
+        <h1>BUDGET <span>MONITOR</span></h1>
+        </div>
+    
+        <div class="main">
+            <div class="topbar">
+                <div class="text-weekly"><h2>WEEKLY</h2></div>
+            </div>
+    
+            <div class="weekly">
+                <p>Enter your Total Expenses each Day: </p>
+                <ul>
+                <li>MON:<input id="num11" type="number"> Php
+                <li>TUES: <input id="num21" type="number"> Php
+                <li>WED: <input id="num31" type="number"> Php
+                <li>THUR: <input id="num41" type="number"> Php
+                <li>FRI: <input id="num51" type="number"> Php
+                <li>SAT: <input id="num61" type="number"> Php
+                <li>SUN: <input id="num71" type="number"> Php
+                </ul>
+    
+                <p><button class="btn" id="calctotal-btn-weekly">Find Total</button></p>
+                <p>Total: <span id="total-out-weekly">_</span> Php</p>
+    
+                <p><button class="btn" id="calcave-btn-weekly">Find Ave</button></p>
+                <p>Average: <span id="ave-out-weekly">_</span> Php</p>
+            </div>
+
+            
+           <div class="topbar">
+            <div class="text-monthly"><h2>MONTHLY</h2></div>
+        </div>
+
+                <div class="monthly">
+                    <p>Enter your Total Expenses each Week: </p>
+                    <ul>
+                    <li>Week 1: <input id="num12" type="number"> Php
+                    <li>Week 2: <input id="num22" type="number"> Php
+                    <li>Week 3: <input id="num32" type="number"> Php
+                    <li>Week 4: <input id="num42" type="number"> Php
+                    </ul>
+        
+                    <p><button class="btn" id="calctotal-btn-monthly">Find Total</button></p>
+                    <p>Total: <span id="total-out-monthly">_</span> Php</p>
+        
+                    <p><button class="btn" id="calcave-btn-monthly">Find Ave</button></p>
+                    <p>Average: <span id="ave-out-monthly">_</span> Php</p>
+                </div>
+        
+         
+        </div>
+
+        <div class="text-anually"><h2>ANNUALLY</h2></div>
+            </div>
+
+        <div class="anually">
+            <p>Enter your Total Expenses each Month: </p>
+            <ul>
+            <li>Jan: <input id="num13" type="number"> Php
+            <li>Feb: <input id="num23" type="number"> Php
+            <li>Mar: <input id="num33" type="number"> Php
+            <li>Apr: <input id="num43" type="number"> Php
+            <li>May: <input id="num53" type="number"> Php
+            <li>Jun: <input id="num63" type="number"> Php
+            <li>Jul: <input id="num73" type="number"> Php
+            <li>Aug: <input id="num83" type="number"> Php
+            <li>Sep: <input id="num93" type="number"> Php
+            <li>Oct: <input id="num103" type="number"> Php
+            <li>Nov: <input id="num113" type="number"> Php
+            <li>Dec: <input id="num123" type="number"> Php
+            </ul>
+
+            <p><button class="btn" id="calctotal-btn-annual">Find Total</button></p>
+            <p>Total: <span id="total-out-annual">_</span> Php</p>
+
+            <p><button class="btn" id="calcave-btn-annual">Find Ave</button></p>
+             <p>Average: <span id="ave-out-annual">_</span> Php</p>
+        
+        </div>
+    </div>
+    
+ </section>
+
+ <!--------------------------ABOUT US------------------------->
+ 
+ <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading"> THE <span> DEVELOPERS </span></h2>
+
+            <div class="queen">
+                <img src="queen.png" alt="">
+                <h3>Queenlan Matias</h3>
+                <p> Queen is a highly skilled member who played a key role in the planning and development of our organization's expense tracking system website. With her extensive knowledge of web development and user experience design, Queen was able to create a website that was both user-friendly and effective in tracking our expenses. Queen's expertise and attention to detail were instrumental in the success of our expense tracking system website, and her contributions have been invaluable to our group. We are grateful for her hard work and dedication, and consider her an essential member of our group.</p>
+            </div>
+            
+
+            <div class="dex">
+                <img src="dex.png" alt="">
+                <h3>Dexter Diaz</h3>
+                <p> Dexter is our group's back-end developer who played a vital role in the development of our group's expense tracking system website. With his in-depth knowledge of back-end programming languages, and frameworks, Dexter was able to create a robust and reliable back-end system that powers the website's functionality. He worked tirelessly to ensure that the back-end code was efficient, scalable, and secure, and he collaborated closely with other members of the group  to integrate the back-end system. Dexter's contributions were instrumental in the successful development of our expense tracking system website. We are fortunate to have Dexter as a member of our group.</p>
+            </div>
+            
+
+            <div class="alex">
+                <img src="alex.png" alt="">
+                <h3>Niño Alexander Borbe</h3>
+                <p> Niño is an accomplished and committed leader who played a crucial role in developing and documenting our expense tracking system website. As a back-end developer, Niño was instrumental in creating a strong and dependable back-end system that supports the website's functionality. Niño possesses exceptional leadership and project management skills, which enabled him to effectively lead and coordinate the development team throughout the project. He also took on the responsibility of documenting the project's development process and implementation, ensuring that the team's efforts were recorded. Niño's contributions were fundamental to the project.</p>
+            </div>
+            
+            <div class="jb">
+                <img src="jb.png" alt="">
+                <h3>Jhon Bert Villarosa</h3>
+                <p> Jhon Bert is a skilled front-end developer who played a critical role in developing our expense tracking system website. With expertise in front-end programming languages, Jhon created a user-friendly interface that seamlessly integrates with the back-end system. His attention to detail, creativity, and technical proficiency were fundamental to the success of our website. We are grateful to have Jhon as part of our team and look forward to his ongoing contributions to our organization's success.</p>
+            </div>
+            
+            
+        
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="footer">
+        <div class="footer-text">
+            <p> &copy; 2023 Expense Tracker System. Software Design.</p>
+        </div>
+
+        <div class="footer-icontop">
+            <a href="#home"><i class='bx bx-up-arrow'></i></a>
+        </div>
+    </footer>
+    
+    <script src="SD.js"></script>
+</body>
+</html>
